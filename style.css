@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #219ebc;
+    text-align: center;
+}
+h1 {
+    color: #03045e;
+    font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-size:14vmin ;
+  }
+  
+  
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7vmin;
+}
+.box{
+    background-color: #8ecae6;
+    height: 18vmin;
+    width: 18vmin;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem .9rem 0rem rgba(14, 13, 13, 0.75);
+    font-size: 8vmin;
+    font-weight: 600;
+    color: #023047;
+    
+}
+.box:hover{
+    background-color: #78becaa6;
+    
+}
+
+#reset{
+    border: none;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.55rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #03045e;
+    color: #caf0f8;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1.6rem;
+    transition: border .1s ease,color 0.3s ease, transform 0.3s ease;
+}
+#reset:hover {
+    border: 3px solid #cdb4db;
+    
+  }
+  #new{
+    margin-bottom: 1rem;
+    border: none;
+    padding: 1rem;
+    font-size: 1.55rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffb703;
+    color: #03045e;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1.5rem;
+    transition: border .1s ease,color 0.3s ease, transform 0.3s ease;
+}
+#new:hover {
+    border: 3px solid #cdb4db;
+    
+  }
+  .msg-container{
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: 800;
+    color: #ffb703;
+  }
+  .hide{
+    display: none;
+  }
+
+  #confetti-container {
+    top: 0;
+    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.7;
+    animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0) rotateX('360') ;
+    }
+    50% {
+        transform: translateX(20px) rotateX('360');
+    }
+}
